@@ -9,7 +9,7 @@ import 'package:crescimento_infantil/app/myapp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:crescimento_infantil/main.dart';
+// import 'package:crescimento_infantil/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
