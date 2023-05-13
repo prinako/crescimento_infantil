@@ -23,11 +23,14 @@ class Login extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
                 padding: const EdgeInsets.only(
                   top: 10,
                   bottom: 20,
                 ),
-                color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -48,11 +51,11 @@ class Login extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      TextButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              Theme.of(context).primaryColor),
-                        ),
+                      ElevatedButton(
+                        // style: ButtonStyle(
+                        //   backgroundColor: MaterialStateProperty.all<Color>(
+                        //       Theme.of(context).primaryColor),
+                        // ),
                         onPressed: () => {},
                         child: const Text("Login"),
                       ),
