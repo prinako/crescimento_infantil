@@ -13,20 +13,12 @@ class MyApp extends StatelessWidget {
             'Ferramentas de avaliação do crescimento e desenvolvimento infantil',
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          primaryColor: Colors.blueAccent,
-          // colorScheme: ColorScheme.fromSwatch(
-          //     primarySwatch: Colors.blue,
-          //     primaryColorDark: Colors.blueAccent,
-          //     errorColor: Colors.red,
-          //     accentColor: Colors.orange,
-          //     cardColor: Colors.white,
-          //     backgroundColor: Colors.red
-          // brightness: Brightness.dark,
-          // ),
+          // primaryColor: Colors.green,
+          hintColor: Colors.grey[500],
           // useMaterial3: true,
         ),
         // themeMode: ThemeMode.system,
-        home: const Login()
+        home: Login()
         //  const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
