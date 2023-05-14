@@ -2,14 +2,16 @@ import 'package:crescimento_infantil/component/login_btn.dart';
 import 'package:crescimento_infantil/component/my_textfield.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  Login({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  SignUp({Key? key}) : super(key: key);
 
+  final userNameController = TextEditingController();
   final userEmailController = TextEditingController();
-  final userSenhaController = TextEditingController();
+  final userPasswordController = TextEditingController();
+  final userConfPasswordController = TextEditingController();
 
-// login user
-  void loginUser() {}
+  // siging up user
+  void SignUpUser() {}
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +23,18 @@ class Login extends StatelessWidget {
           child: SingleChildScrollView(
             reverse: true,
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 70),
-                const Center(
-                  child: Icon(
-                    Icons.lock,
-                    color: Colors.white,
-                    size: 40,
-                  ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 60),
+                const Icon(
+                  Icons.bookmark_add,
+                  color: Colors.white,
+                  size: 40,
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "Faça Login",
+                  "Criar sua Conta ...",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -43,41 +43,54 @@ class Login extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  decoration: const BoxDecoration(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  padding: const EdgeInsets.all(12.0),
                   child: Column(
-                    // crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       const SizedBox(height: 20),
                       MyTextField(
+                        controller: userNameController,
+                        hintText: 'Nome Completo',
+                        obscureText: false,
+                        keyboardType: TextInputType.name,
+                      ),
+                      const SizedBox(height: 10),
+                      MyTextField(
                         controller: userEmailController,
-                        hintText: "Email:",
+                        hintText: 'Email',
                         obscureText: false,
                         keyboardType: TextInputType.emailAddress,
                       ),
                       const SizedBox(height: 10),
                       MyTextField(
-                        controller: userSenhaController,
-                        hintText: "Senha:",
+                        controller: userPasswordController,
+                        hintText: 'Senha',
+                        obscureText: true,
+                        keyboardType: TextInputType.visiblePassword,
+                      ),
+                      const SizedBox(height: 10),
+                      MyTextField(
+                        controller: userConfPasswordController,
+                        hintText: 'Confimar Senha',
                         obscureText: true,
                         keyboardType: TextInputType.text,
                       ),
-                      const SizedBox(height: 25),
+                      const SizedBox(height: 30),
                       LoginBtn(
-                        onTap: loginUser,
-                        btnLable: 'Login',
+                        onTap: SignUpUser,
+                        btnLable: 'Cadastrar',
                       ),
                       const SizedBox(height: 10),
                       Row(
                         children: [
-                          const Text("Não  tenho uma conta"),
+                          const Text("Já tenho uma conta"),
                           TextButton(
                             onPressed: () => {},
                             child: Text(
-                              "cadastre-se",
+                              "Login",
                               style: TextStyle(
                                 color: Theme.of(context).primaryColor,
                               ),
@@ -87,7 +100,7 @@ class Login extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )
               ],
             ),
           ),

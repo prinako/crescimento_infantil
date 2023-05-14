@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class LoginBtn extends StatelessWidget {
   final Function()? onTap;
+  final String btnLable;
 
   const LoginBtn({
     Key? key,
     required this.onTap,
+    required this.btnLable,
   }) : super(key: key);
 
   @override
@@ -17,13 +19,13 @@ class LoginBtn extends StatelessWidget {
         decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
             borderRadius: BorderRadius.circular(5)),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Login',
-            style: TextStyle(
+            btnLable,
+            style: const TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              fontSize: 18,
             ),
           ),
         ),

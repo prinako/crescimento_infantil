@@ -1,3 +1,4 @@
+import 'package:crescimento_infantil/telas/sign_up.dart';
 import 'package:flutter/material.dart';
 
 //local imports
@@ -13,12 +14,12 @@ class MyApp extends StatelessWidget {
             'Ferramentas de avaliação do crescimento e desenvolvimento infantil',
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          // primaryColor: Colors.green,
+          primaryColor: Colors.blue,
           hintColor: Colors.grey[500],
-          // useMaterial3: true,
+          useMaterial3: true,
         ),
         // themeMode: ThemeMode.system,
-        home: Login()
+        home: SignUp()
         //  const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
